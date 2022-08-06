@@ -1,0 +1,17 @@
+<ActionBar title="Home">
+</ActionBar>
+
+<GridLayout>
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <TextField [(ngModel)]="email" hint="Enter your email...">
+            </TextField>
+            <TextField [(ngModel)]="password" secure="true"
+                hint="Enter your password...">
+            </TextField>
+            <Button text="Log In" (tap)="login()"></Button>
+            <Label text="Login failed!" *ngIf="!failedMessageHidden"></Label>
+            <Button text="Products" nsRouterLink="/products"></Button>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

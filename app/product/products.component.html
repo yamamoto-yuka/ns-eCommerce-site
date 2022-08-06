@@ -1,0 +1,18 @@
+<ActionBar title="Products" class="action-bar">
+</ActionBar>
+<ScrollView class="page">
+    <StackLayout class="home-panel" verticalAlignment="top">
+        <!--Add your page content here-->
+        <StackLayout class="productContainer" *ngFor="let product of produsts">
+            <Image class="productImage"
+                [src]="product.attributes.product_image/data[0].attributes.formats.thumbnail.url">
+            </Image>
+            <Label text="Phone Cover" class="heading"></Label>
+            <Label text="$11.99" class="price"></Label>
+            <Label
+                text="Phone cover description will be placed here. This is the description"
+                textWrap="true"></Label>
+            <Label text="*****"></Label>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>
